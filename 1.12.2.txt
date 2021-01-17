@@ -1,0 +1,21 @@
+# 마크 서버 설치 스크립트
+# 운영체제 : CentOS7
+#!/bin/sh
+yum -y install wget
+yum -y install "java-1.8.0-openjdk*"
+
+cd /usr/local/src
+mkdir /usr/local/src/minecraft-1.12.2
+cd /usr/local/src/minecraft-1.12.2
+
+wget "https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2854/forge-1.12.2-14.23.5.2854-installer.jar"
+
+java -jar forge-1.12.2-14.23.5.2854-installer.jar --installServer
+
+java -jar forge-1.12.2-14.23.5.2854.jar
+
+sed -i "s/eula=false/eula=true/g" eula.txt
+
+echo "#!/usr/bin/sh" >> start.sh
+echo "java -Xms16G -Xms18G -jar forge-1.12.2-14.23.5.2854.jar nogui" >> start.sh
+chmod u+x start.sh
