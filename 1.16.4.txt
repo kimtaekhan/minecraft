@@ -9,12 +9,12 @@ cd /usr/local/src/minecraft-1.16.4
 
 wget "https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.16.4-35.1.36/forge-1.16.4-35.1.36-installer.jar"
 
-java -jar forge-1.16.4-35.1.36-installer.jar --installServer
+java -jar /usr/local/src/minecraft-1.16.4/forge-1.16.4-35.1.36-installer.jar --installServer
 
-java -jar forge-1.16.4-35.1.36.jar
+java -jar /usr/local/src/minecraft-1.16.4/forge-1.16.4-35.1.36.jar
 
 sed -i "s/eula=false/eula=true/g" /usr/local/src/minecraft-1.16.4/eula.txt
 
-echo "#!/usr/bin/sh" >> start.sh
-echo "java -Xms1G -Xmx2G -jar forge-1.16.4-35.1.36.jar nogui" >> start.sh
-chmod u+x start.sh
+echo "#!/usr/bin/sh" >> /usr/local/src/minecraft-1.16.4/start.sh
+echo "java -Xms1G -Xmx2G -jar forge-1.16.4-35.1.36.jar nogui" >> /usr/local/src/minecraft-1.16.4/start.sh
+chmod u+x /usr/local/src/minecraft-1.16.4/start.sh
