@@ -13,7 +13,7 @@ java -jar forge-1.16.4-35.1.36-installer.jar --installServer
 
 java -jar forge-1.16.4-35.1.36.jar
 
-sed -i "s/eula=false/eula=true/g" eula.txt
+sed -i "s/eula=false/eula=true/g" /usr/local/src/minecraft-1.16.4/eula.txt
 
 echo "#!/usr/bin/sh" >> start.sh
 echo "java -Xms1G -Xmx2G -jar forge-1.16.4-35.1.36.jar nogui" >> start.sh
