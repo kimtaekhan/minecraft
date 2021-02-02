@@ -17,9 +17,5 @@ java -jar forge-1.16.4-35.1.36.jar
 sed -i "s/eula=false/eula=true/g" eula.txt
 
 echo "#!/usr/bin/sh" >> start.sh
-echo "java -Xms16G -Xms18G -jar forge-1.16.4-35.1.36.jar nogui" >> start.sh
+echo "java -Xms1G -Xmx2G -jar forge-1.16.4-35.1.36.jar nogui" >> start.sh
 chmod u+x start.sh
-
-# 포켓몬 모드
-cd /usr/local/src/minecraft/mods
-wget "https://media.forgecdn.net/files/3147/361/pokecube-aio-1.16.4-3.4.2.jar"
