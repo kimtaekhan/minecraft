@@ -1,7 +1,6 @@
 # 마크 서버 설치 스크립트
 # 운영체제 : CentOS7
 #!/bin/sh
-yum -y install wget
 yum -y install "java-1.8.0-openjdk*"
 
 cd /usr/local/src
